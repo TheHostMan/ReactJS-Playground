@@ -1,0 +1,92 @@
+@mixin flex {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+$backgroundColor: rgb(66, 62, 62);
+$cursor: pointer;
+
+.NavBar {
+	position: absolute;
+	display: block;
+	width: 60%;
+	height: 100px;
+	top: 25%;
+	left: 10%;
+	margin: 0 15%;
+	background-image: url('../../../assets/MainPage/Images/Main_Banner.png');
+	background-repeat: no-repeat;
+	background-size: contain;
+	z-index: 90;
+	nav {
+		ul {
+			display: inline-flex;
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			overflow: hidden;
+			width: 80%;
+			left: 10%;
+			.homeArea {
+				display: block;
+				position: relative;
+				left: 15px;
+				padding: 0;
+				width: 80px;
+				height: 75px;
+				margin: 10.5px 0;
+				background-color: $backgroundColor;
+				border: none;
+				cursor: $cursor;
+				.homeImage {
+					display: block;
+					max-width: 75px;
+					max-height: 75px;
+					margin: 4px;
+				}
+			}
+			li {
+				position: relative;
+				float: left;
+				margin: 10px;
+				left: 17.5px;
+				top: 5px;
+				a {
+					@include flex;
+					position: relative;
+					text-align: center;
+					text-decoration: none;
+					padding: 23.25px;
+					color: white;
+				}
+			}
+
+			.buttonArea {
+				@include flex;
+				.buttonChild {
+					position: relative;
+					-webkit-box-flex: 1 1 auto;
+					-moz-box-flex: 1 1 auto;
+					-webkit-flex: 1 1 auto;
+					-ms-flex: 1 1 auto;
+					flex: 1 1 auto;
+					right: -40px;
+					top: 17px;
+					height: 70px;
+					border: none;
+					margin: 0px 5px;
+					cursor: $cursor;
+					background-color: $backgroundColor;
+					img {
+						background-color: $backgroundColor;
+						width: 25px;
+						height: 25px;
+					}
+				}
+			}
+		}
+	}
+}

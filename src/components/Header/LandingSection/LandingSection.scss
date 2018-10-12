@@ -1,8 +1,43 @@
+$font-family-1: "DejaVu Serif";
+$font-bold: 700;
+$font-style: italic;
+
+@font-face {
+	font-family: "DejaVu Serif";
+	src: local('../../../assets/MainPage/Fonts/DejaVuSerif.tff');
+	font-style: italic;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "DejaVu Serif";
+	src: local('../../../assets/MainPage/Fonts/DejaVuSerif.tff');
+	font-style: normal;
+	font-weight: normal;
+}
+
 .LandingSection {
-   position: relative;
-    width:100%;
-    height: 550px;
-    background-image: url("../../../assets/Epikoinonia/Images/Photo_epikoinonia.png");
-    background-repeat: no-repeat;
-    
+	position: relative;
+	width: 100%;
+	height: 550px;
+	background-image: url("../../../assets/Epikoinonia/Images/Photo_epikoinonia.png");
+	background-repeat: no-repeat;
+	z-index: 50;
+
+	.TextArea {
+		position: relative;
+		display: block;
+		left: 20%;
+		top: 20%;
+		width: 60%;
+		h1 {
+			font-family: $font-family-1;
+			text-align: center;
+			font-style: $font-style;
+			color: white;
+			margin: 0;
+			font-size: 52pt;
+			text-shadow: 3.5px 2.5px #000;
+		}
+	}
 }
